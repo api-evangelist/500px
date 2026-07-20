@@ -1,0 +1,32 @@
+generated: '2026-07-17'
+method: searched
+source: https://github.com/500px/legacy-api-documentation/blob/master/README.md
+docs: https://github.com/500px/legacy-api-documentation/blob/master/authentication/README.md
+status: retired
+note: >-
+  The 500px public API program was discontinued on 2018-06-15. The authentication model below is
+  captured from the legacy API documentation for historical reference; live credentials are no
+  longer issued.
+summary:
+  types: [oauth1, apiKey]
+  api_key_in: [query]
+  oauth_version: 1.0a
+schemes:
+- name: ConsumerKey
+  type: apiKey
+  in: query
+  parameter: consumer_key
+  description: >-
+    Public read-only requests (feature streams, public photos, public user profiles) are signed
+    with a Consumer Key passed as the consumer_key query-string parameter. No user context.
+  sources: [https://github.com/500px/legacy-api-documentation]
+- name: OAuth1
+  type: oauth1
+  flow: 1.0a
+  request_token_url: https://api.500px.com/v1/oauth/request_token
+  authorize_url: https://api.500px.com/v1/oauth/authorize
+  access_token_url: https://api.500px.com/v1/oauth/access_token
+  description: >-
+    User-scoped requests (uploads, voting, following, private data) use three-legged OAuth 1.0a
+    with HMAC-SHA1 request signing.
+  sources: [https://github.com/500px/legacy-api-documentation]
