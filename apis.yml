@@ -1,20 +1,114 @@
 aid: 500px
 name: 500px
-description: 500px is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  500px is an online photography community and stock-licensing platform where millions of
+  photographers from over 195 countries showcase, discover, and license high-quality images.
+  Founded in Toronto in 2009 and acquired by Visual China Group (VCG) in 2018, 500px combines a
+  social network for photographers with a Licensing marketplace and Quest photo contests. 500px
+  historically operated a public REST API (api.500px.com/v1) that exposed photo feeds, photo and
+  comment data, user profiles, galleries, and uploads using OAuth 1.0a and Consumer Key
+  authentication; that public API program was discontinued on June 15, 2018, and the platform is
+  now community- and web-first. This profile documents the retired API surface, the identity of
+  the company, and its remaining developer-relevant properties.
 url: https://raw.githubusercontent.com/api-evangelist/500px/refs/heads/main/apis.yml
 x-type: company
 x-source: a16z-portfolio
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/1775300?v=4
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
-apis: []
+- Photography
+- Stock Photos
+- Image Licensing
+- Community
+- Social Network
+- Media
+- Content
+apis:
+- name: 500px Legacy API (v1)
+  description: >-
+    500px v1 REST API providing programmatic access to photo feature streams, photo information
+    and comments, user profiles, galleries, and uploads. Responses are JSON; authentication uses
+    OAuth 1.0a for user-scoped requests and a Consumer Key for public read-only requests. This
+    public API program was discontinued on 2018-06-15 and is retained here as historical
+    documentation.
+  humanURL: https://github.com/500px/legacy-api-documentation
+  baseURL: https://api.500px.com/v1
+  tags:
+  - Photos
+  - Photography
+  - Users
+  - Galleries
+  - Comments
+  properties:
+  - type: Documentation
+    url: https://github.com/500px/legacy-api-documentation
+  - type: APIReference
+    url: https://github.com/500px/legacy-api-documentation/tree/master/endpoints
+  - type: Authentication
+    url: authentication/500px-authentication.yml
+  - type: Deprecation
+    url: https://support.500px.com/hc/en-us/articles/360002435653-API
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: Website
+  url: https://500px.com
+- type: DeveloperPortal
+  url: https://github.com/500px/legacy-api-documentation
+- type: Documentation
+  url: https://github.com/500px/legacy-api-documentation
+- type: Blog
+  url: https://iso.500px.com
+- type: Support
+  url: https://support.500px.com
+- type: GitHubOrganization
+  url: https://github.com/500px
+- type: SignUp
+  url: https://500px.com/signup
+- type: Login
+  url: https://500px.com/login
+- type: Pricing
+  url: https://500px.com/upgrade
+- type: TermsOfService
+  url: https://500px.com/terms
+- type: PrivacyPolicy
+  url: https://500px.com/privacy
+- type: StatusPage
+  url: https://status.500px.com
+- type: Deprecation
+  url: https://support.500px.com/hc/en-us/articles/360002435653-API
+- type: Authentication
+  url: authentication/500px-authentication.yml
+- type: Lifecycle
+  url: lifecycle/500px-lifecycle.yml
+- type: Conventions
+  url: conventions/500px-conventions.yml
+- type: DomainSecurity
+  url: security/500px-domain-security.yml
+- type: WellKnown
+  url: well-known/500px-well-known.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
