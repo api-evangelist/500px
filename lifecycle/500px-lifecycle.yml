@@ -1,0 +1,21 @@
+generated: '2026-07-17'
+method: searched
+source: https://support.500px.com/hc/en-us/articles/360002435653-API
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://github.com/500px/legacy-api-documentation
+deprecation:
+  policy_url: https://support.500px.com/hc/en-us/articles/360002435653-API
+  status: retired
+  free_access_discontinued: '2018-01-24'
+  api_shutdown: '2018-06-15'
+  note: >-
+    500px discontinued free public API access on 2018-01-24 and fully shut down all public API
+    access on 2018-06-15. Existing API keys stopped working on that date. No public API program
+    has replaced it.
+status_page: https://status.500px.com
+deprecated_operations:
+- collections/sets resources (superseded by gallery resources)
+- photo image_url key (deprecated 2014-03-27)
+- upload_key upload flow (deprecated 2017-12-12)

@@ -1,0 +1,18 @@
+generated: '2026-07-17'
+method: searched
+host: https://500px.com
+note: >-
+  Probed 500px.com for the /.well-known/ discovery surface. The origin is fronted by Cloudflare
+  and returns HTTP 403 to automated requests for all probed paths; no discovery document was
+  retrievable. Absence of a served document is recorded as valid data.
+documents:
+- path: /.well-known/security.txt
+  status: 403
+- path: /.well-known/openid-configuration
+  status: 403
+- path: /.well-known/oauth-authorization-server
+  status: 403
+- path: /.well-known/api-catalog
+  status: 403
+- path: /.well-known/ai-plugin.json
+  status: 403

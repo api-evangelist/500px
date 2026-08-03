@@ -1,0 +1,39 @@
+generated: '2026-07-17'
+method: searched
+source: https://github.com/500px/legacy-api-documentation/blob/master/README.md
+status: retired
+note: >-
+  Cross-cutting request/response conventions of the retired 500px v1 API, captured from the legacy
+  documentation for historical reference.
+authentication:
+  style: oauth1 + consumer_key
+  detail: see authentication/500px-authentication.yml
+media_type:
+  request: application/x-www-form-urlencoded
+  response: application/json
+pagination:
+  style: page-number
+  params:
+    page: 1-based page index
+    rpp: results per page (max 100)
+  response_fields:
+  - current_page
+  - total_pages
+  - total_items
+rate_limiting:
+  quota: 1,000,000 API requests per month per account
+  effective: '2014-05-01'
+  signaling: not documented in legacy spec
+versioning:
+  style: uri-path
+  detail: version prefix in path (/v1/)
+error_envelope:
+  style: json
+  detail: >-
+    Errors returned as JSON with an HTTP status code and an "error" message field; no RFC 9457
+    problem+json usage.
+idempotency:
+  supported: false
+cross_links:
+  authentication: authentication/500px-authentication.yml
+  lifecycle: lifecycle/500px-lifecycle.yml
