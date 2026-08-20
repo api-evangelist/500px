@@ -53,6 +53,12 @@ apis:
   tags:
   - Photos
   - Photography
+  - User
+  - Galleries
+  - Comments
+  tags_raw:
+  - Photos
+  - Photography
   - Users
   - Galleries
   - Comments
