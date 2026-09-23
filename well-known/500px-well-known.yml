@@ -1,18 +1,24 @@
 generated: '2026-07-17'
 method: searched
 host: https://500px.com
-note: >-
-  Probed 500px.com for the /.well-known/ discovery surface. The origin is fronted by Cloudflare
-  and returns HTTP 403 to automated requests for all probed paths; no discovery document was
-  retrievable. Absence of a served document is recorded as valid data.
-documents:
-- path: /.well-known/security.txt
-  status: 403
-- path: /.well-known/openid-configuration
-  status: 403
-- path: /.well-known/oauth-authorization-server
-  status: 403
-- path: /.well-known/api-catalog
-  status: 403
-- path: /.well-known/ai-plugin.json
-  status: 403
+note: Probed 500px.com for the /.well-known/ discovery surface. The origin is fronted by Cloudflare and
+  returns HTTP 403 to automated requests for all probed paths; no discovery document was retrievable.
+  Absence of a served document is recorded as valid data.
+hosts:
+- host: https://500px.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
