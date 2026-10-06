@@ -42,7 +42,7 @@ accessModel:
 image: https://avatars.githubusercontent.com/u/1775300?v=4
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-10-06'
 tags:
 - Company
 - Photography
@@ -89,6 +89,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://500px.com/blog/
+  type: Blog
 - type: Website
   url: https://500px.com
 - type: DeveloperPortal
